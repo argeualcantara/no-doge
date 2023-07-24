@@ -1,0 +1,16 @@
+{
+  "name": "No Doge",
+  "description": "Fix twitter logo removes the new X logo from twitter main screen",
+  "version": "2.0",
+  "manifest_version": 3,
+  "content_scripts": [{
+    "js": ["no-doge.js"],
+    "matches": ["https://twitter.com/*"]
+  }],
+  "action": {
+    "default_icon": "no-doge.png"
+  },
+  "icons": {
+    "128": "no-doge-128.png"
+  }
+}
