@@ -1,5 +1,6 @@
 
 // Twitter.com code
+const lang = navigator.language;
 if (location.href.indexOf("tweetdeck") == -1) {
     var i = 0;
     const loading = setInterval(() => {
@@ -36,7 +37,7 @@ if (location.href.indexOf("tweetdeck") == -1) {
         }
         var bttn = document.querySelector("#react-root > div > div > div > header > div > div > div > div > div > a > div > span > div > div > span > span");
         if (bttn) {
-            bttn.innerText = "Twittar"
+            bttn.innerText = (lang == "pt-BR"?"Tweetar":"Tweet");
         }
         var title = document.querySelector("head > title").innerHTML
         if (title) {
@@ -45,7 +46,7 @@ if (location.href.indexOf("tweetdeck") == -1) {
         
     }, 500);
 }
-
+// Tweetdeck code
 if (location.href.indexOf("tweetdeck") != -1) {
 
     setInterval(() => {
@@ -59,9 +60,9 @@ if (location.href.indexOf("tweetdeck") != -1) {
             }
         }
         
-        var bttn = document.querySelector("#react-root > div > div > div > header > div > div > div > div > div > a > div > span > div > div > span > span");
+        var bttn = document.querySelector("#react-root > div > div > div > div > div > div > div > div > span > span");
         if (bttn) {
-            bttn.innerText = "Twittar"
+            bttn.innerText = (lang == "pt-BR"?"Tweetar":"Tweet");
         }
 
         var title = document.querySelector("head > title").innerHTML
