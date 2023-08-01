@@ -1,16 +1,16 @@
 {
-  "name": "No Doge",
-  "description": "Fix twitter logo removes the new X logo from twitter main screen",
+  "name": "Original Twitter",
+  "description": "This extension changes the new X logos back to the original bird logo from twitter",
   "version": "2.3",
   "manifest_version": 3,
   "content_scripts": [{
-    "js": ["no-doge.js"],
+    "js": ["old-twitter.js"],
     "matches": ["https://twitter.com/*"]
   }],
   "action": {
-    "default_icon": "no-doge.png"
+    "default_icon": "old-twitter-150.png"
   },
   "icons": {
-    "128": "no-doge-128.png"
+    "128": "old-twitter-128.png"
   }
 }
