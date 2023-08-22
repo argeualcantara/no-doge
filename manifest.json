@@ -1,7 +1,7 @@
 {
   "name": "Original Twitter",
   "description": "This extension changes the new X logos back to the original bird logo from twitter. Now with support for tweetdeck.",
-  "version": "2.4",
+  "version": "2.5",
   "manifest_version": 3,
   "content_scripts": [{
     "js": ["old-twitter.js"],
