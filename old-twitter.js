@@ -1,6 +1,11 @@
+// Setting language, try getting value from cookie, then browser
+const cookieLang = document.cookie
+.split("; ")
+.find((row) => row.startsWith("lang="))
+.split("=")[1];
+const lang = cookieLang? cookieLang.toLowerCase(): navigator.language.toLowerCase();
 
 // Twitter.com code
-const lang = navigator.language;
 if (location.href.indexOf("tweetdeck") == -1) {
     var i = 0;
     const loading = setInterval(() => {
@@ -41,7 +46,28 @@ if (location.href.indexOf("tweetdeck") == -1) {
         }
         var title = document.querySelector("head > title").innerHTML
         if (title) {
-            document.querySelector("head > title").innerHTML = title.replace(" / X", " / Twitter");
+            var newTitle = title.replace(" / X", " / Twitter");
+            newTitle = newTitle.replace("on X", "on Twitter").replace("no X", "no Twitter");
+            document.querySelector("head > title").innerHTML = newTitle;
+        }
+
+        var tweetBtn = document.querySelector("#react-root > div > div > div > main > div > div > div > div > div > div > div > div > div:nth-child(1) > div > div > div > div > div > div:nth-child(2) > div > div > div:nth-child(2) > div > div > span > span");
+        if(tweetBtn) {
+            tweetBtn.innerText = (lang.indexOf("pt") != -1?"Tweetar":"Tweet");
+        }
+        var modalTweetBtn = document.querySelector("#layers > div:nth-child(2) > div > div > div > div > div > div.css-1dbjc4n.r-1habvwh.r-18u37iz.r-1pi2tsx.r-1777fci.r-1xcajam.r-ipm5af.r-g6jmlv > div.css-1dbjc4n.r-1867qdf.r-1wbh5a2.r-rsyp9y.r-1pjcn9w.r-htvplk.r-1udh08x.r-1potc6q > div > div > div > div:nth-child(3) > div.css-1dbjc4n.r-yfoy6g.r-1pp923h.r-1moyyf3.r-1h8ys4a > div:nth-child(1) > div > div > div > div.css-1dbjc4n.r-yfoy6g.r-jumn1c.r-xd6kpl.r-gtdqiz.r-ipm5af.r-184en5c > div:nth-child(2) > div > div > div:nth-child(2) > div > div > span > span");
+        if(modalTweetBtn) {
+            modalTweetBtn.innerText = (lang.indexOf("pt") != -1?"Tweetar":"Tweet");
+        }
+
+        var retwtBtn = document.querySelector("#layers > div.css-1dbjc4n.r-1p0dtai.r-1d2f490.r-105ug2t.r-u8s1d.r-zchlnj.r-ipm5af > div > div > div > div:nth-child(2) > div > div.css-1dbjc4n.r-yfoy6g.r-1q9bdsx.r-xnswec.r-j2cz3j.r-1udh08x.r-u8s1d > div > div > div > div[data-testid='retweetConfirm'] > div > div > span");
+        if(retwtBtn) {
+            retwtBtn.innerText = (lang.indexOf("pt") != -1?"Retweetar":"Retweet");
+        }
+        
+        var commentRetwtBtn = document.querySelector("#layers > div.css-1dbjc4n.r-1p0dtai.r-1d2f490.r-105ug2t.r-u8s1d.r-zchlnj.r-ipm5af > div > div > div > div:nth-child(2) > div > div.css-1dbjc4n.r-yfoy6g.r-1q9bdsx.r-xnswec.r-j2cz3j.r-1udh08x.r-u8s1d > div > div > div > a[href='/compose/tweet'] > div > div > span");
+        if(commentRetwtBtn) {
+            commentRetwtBtn.innerText = (lang.indexOf("pt") != -1?"Comentar o Tweet":"Quote Tweet");
         }
         
     }, 500);
