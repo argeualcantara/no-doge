@@ -55,50 +55,55 @@ if (location.href.indexOf("tweetdeck") == -1) {
         if(tweetBtn) {
             tweetBtn.innerText = (lang.indexOf("pt") != -1?"Tweetar":"Tweet");
         }
-        var modalTweetBtn = document.querySelector("#layers > div:nth-child(2) > div > div > div > div > div > div.css-1dbjc4n.r-1habvwh.r-18u37iz.r-1pi2tsx.r-1777fci.r-1xcajam.r-ipm5af.r-g6jmlv > div.css-1dbjc4n.r-1867qdf.r-1wbh5a2.r-rsyp9y.r-1pjcn9w.r-htvplk.r-1udh08x.r-1potc6q > div > div > div > div:nth-child(3) > div.css-1dbjc4n.r-yfoy6g.r-1pp923h.r-1moyyf3.r-1h8ys4a > div:nth-child(1) > div > div > div > div.css-1dbjc4n.r-yfoy6g.r-jumn1c.r-xd6kpl.r-gtdqiz.r-ipm5af.r-184en5c > div:nth-child(2) > div > div > div:nth-child(2) > div > div > span > span");
+        var modalTweetBtn = document.querySelector("#layers > div:nth-child(2) > div > div > div > div > div > div.css-175oi2r.r-1ny4l3l.r-18u37iz.r-1pi2tsx.r-1777fci.r-1xcajam.r-ipm5af.r-g6jmlv.r-1habvwh > div.css-175oi2r.r-1wbh5a2.r-htvplk.r-1udh08x.r-1867qdf.r-rsyp9y.r-1pjcn9w.r-1potc6q > div > div > div > div:nth-child(3) > div.css-175oi2r.r-yfoy6g.r-1h8ys4a.r-1moyyf3.r-1pp923h > div:nth-child(1) > div > div > div > div.css-175oi2r.r-yfoy6g.r-jumn1c.r-xd6kpl.r-gtdqiz.r-ipm5af.r-184en5c > div:nth-child(2) > div > div > div > div > div > span > span");
         if(modalTweetBtn) {
             modalTweetBtn.innerText = (lang.indexOf("pt") != -1?"Tweetar":"Tweet");
         }
+        var responseTweet = document.querySelector("#react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div.css-175oi2r.r-yfoy6g.r-18bvks7.r-13l2t4g.r-1ljd8xs.r-1phboty.r-16y2uox.r-184en5c.r-61z16t.r-11wrixw.r-1jgb5lz.r-13qz1uu.r-1ye8kvj > div > section > div > div > div:nth-child(1) > div > div > div > div > div.css-175oi2r.r-yfoy6g.r-1h8ys4a.r-1f1sjgu > div:nth-child(1) > div > div > div > div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-1h8ys4a.r-1bylmt5.r-13tjlyg.r-7qyjyx.r-1ftll1t > div:nth-child(1) > div > div > div > div > div.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19u6a5r.r-2yi16.r-1qi8awa.r-ymttw5.r-o7ynqc.r-6416eg.r-icoktb.r-1ny4l3l > div > span > span");
+        if(responseTweet) {
+            responseTweet.innerText = (lang.indexOf("pt") != -1?"Tweetar":"Tweet");
+        }
+        var tweetAllBtn = document.querySelector("#layers > div:nth-child(2) > div > div > div > div > div > div.css-175oi2r.r-1ny4l3l.r-18u37iz.r-1pi2tsx.r-1777fci.r-1xcajam.r-ipm5af.r-g6jmlv.r-1habvwh > div.css-175oi2r.r-1wbh5a2.r-htvplk.r-1udh08x.r-1867qdf.r-rsyp9y.r-1pjcn9w.r-1potc6q > div > div > div > div:nth-child(3) > div.css-175oi2r.r-yfoy6g.r-1h8ys4a.r-1moyyf3.r-1pp923h > div > div > div > div > div.css-175oi2r.r-yfoy6g.r-jumn1c.r-xd6kpl.r-gtdqiz.r-ipm5af.r-184en5c > div:nth-child(2) > div > div > div > div.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19u6a5r.r-2yi16.r-1qi8awa.r-ymttw5.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l > div > span > span");
+        
+        if(tweetAllBtn) {
+            tweetAllBtn.innerText = (lang.indexOf("pt") != -1?"Tweetar tudo":"Tweet all");
+        }
+        var tweetAllBtnDisabled = document.querySelector("#layers > div:nth-child(2) > div > div > div > div > div > div.css-175oi2r.r-1ny4l3l.r-18u37iz.r-1pi2tsx.r-1777fci.r-1xcajam.r-ipm5af.r-g6jmlv.r-1habvwh > div.css-175oi2r.r-1wbh5a2.r-htvplk.r-1udh08x.r-1867qdf.r-rsyp9y.r-1pjcn9w.r-1potc6q > div > div > div > div:nth-child(3) > div.css-175oi2r.r-yfoy6g.r-1h8ys4a.r-1moyyf3.r-1pp923h > div > div > div > div > div.css-175oi2r.r-yfoy6g.r-jumn1c.r-xd6kpl.r-gtdqiz.r-ipm5af.r-184en5c > div:nth-child(2) > div > div > div > div > div > span > span");
+        if(tweetAllBtnDisabled) {
+            tweetAllBtnDisabled.innerText = (lang.indexOf("pt") != -1?"Tweetar tudo":"Tweet all");
+        }
 
-        var retwtBtn = document.querySelector("#layers > div.css-1dbjc4n.r-1p0dtai.r-1d2f490.r-105ug2t.r-u8s1d.r-zchlnj.r-ipm5af > div > div > div > div:nth-child(2) > div > div.css-1dbjc4n.r-yfoy6g.r-1q9bdsx.r-xnswec.r-j2cz3j.r-1udh08x.r-u8s1d > div > div > div > div[data-testid='retweetConfirm'] > div > div > span");
+        var retwtBtn = document.querySelector("#layers > div.css-175oi2r.r-zchlnj.r-u8s1d.r-1d2f490.r-ipm5af.r-1p0dtai.r-105ug2t > div > div > div > div.css-175oi2r.r-1ny4l3l > div > div.css-175oi2r.r-j2cz3j.r-yfoy6g.r-1q9bdsx.r-xnswec.r-1udh08x.r-u8s1d > div > div > div > div > div.css-175oi2r.r-16y2uox.r-1wbh5a2 > div > span");
         if(retwtBtn) {
             retwtBtn.innerText = (lang.indexOf("pt") != -1?"Retweetar":"Retweet");
         }
         
-        var commentRetwtBtn = document.querySelector("#layers > div.css-1dbjc4n.r-1p0dtai.r-1d2f490.r-105ug2t.r-u8s1d.r-zchlnj.r-ipm5af > div > div > div > div:nth-child(2) > div > div.css-1dbjc4n.r-yfoy6g.r-1q9bdsx.r-xnswec.r-j2cz3j.r-1udh08x.r-u8s1d > div > div > div > a[href='/compose/tweet'] > div > div > span");
+        var commentRetwtBtn = document.querySelector("#layers > div.css-175oi2r.r-zchlnj.r-u8s1d.r-1d2f490.r-ipm5af.r-1p0dtai.r-105ug2t > div > div > div > div.css-175oi2r.r-1ny4l3l > div > div.css-175oi2r.r-j2cz3j.r-yfoy6g.r-1q9bdsx.r-xnswec.r-1udh08x.r-u8s1d > div > div > div > a > div.css-175oi2r.r-16y2uox.r-1wbh5a2 > div > span");
         if(commentRetwtBtn) {
             commentRetwtBtn.innerText = (lang.indexOf("pt") != -1?"Comentar o Tweet":"Quote Tweet");
         }
 
-        var quoteRtDiv = document.querySelector("#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div > div > div > div.css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1ljd8xs.r-13l2t4g.r-1phboty.r-16y2uox.r-1jgb5lz.r-11wrixw.r-61z16t.r-1ye8kvj.r-13qz1uu.r-184en5c > div > section > div > div > div > div > div > article[tabindex='-1'] > div > div > div:nth-child(3) > div.css-1dbjc4n.r-1r5su4o > div > div.css-1dbjc4n.r-1wbh5a2.r-1b7u577 > div")
+        var quoteDivParent = document.querySelector("#react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div.css-175oi2r.r-yfoy6g.r-18bvks7.r-13l2t4g.r-1ljd8xs.r-1phboty.r-16y2uox.r-184en5c.r-61z16t.r-11wrixw.r-1jgb5lz.r-13qz1uu.r-1ye8kvj > div > section > div > div > div:nth-child(1) > div > div > article > div > div > div:nth-child(3) > div.css-175oi2r.r-1r5su4o")
 
-        if(quoteRtDiv) {
-            var quoteRtText = (lang.indexOf("pt") != -1?"Comentários RTs":"Quote RTs");
+        if(quoteDivParent) {
+            var quoteRtText = (lang.indexOf("pt") != -1?"RTs Comentados":"Quote RTs");
             
-            var quoteRtDiv2 = document.createElement("div");
-            quoteRtDiv2.setAttribute("dir", "ltr");
-            quoteRtDiv2.setAttribute("class", "css-901oao r-vlxjld r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0");
+            var quoteDivChild = document.createElement("div");
+            quoteDivChild.setAttribute("dir", "ltr");
+            quoteDivChild.setAttribute("class", "css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41");
             
             var quoteRTSpan = document.createElement("span");
-            quoteRTSpan.setAttribute("class", "css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0");
-            quoteRTSpan.setAttribute("style", "font-weight: 700; margin-left: 8px; cursor: pointer;");
+            quoteRTSpan.setAttribute("class", "css-1qaijid r-bcqeeo r-qvutc0 r-poiln3");
+            quoteRTSpan.setAttribute("style", "font-weight: 700; cursor: pointer;");
             
-            var quoteRTSpan2 = document.createElement("span");
-            quoteRTSpan2.setAttribute("span", "css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0");
-            
-            var quoteRTSpan3 = document.createElement("span");
-            quoteRTSpan2.setAttribute("span", "css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0");
-            
-            if(quoteRtDiv.innerHTML.indexOf(quoteRtText) < 0) {
+            if(quoteDivParent.innerHTML.indexOf(quoteRtText) < 0) {
                 var link = document.createElement("a");
                 link.setAttribute("href",document.location + "/quotes");
                 link.setAttribute("style", "color: white; text-decoration: none");
                 link.innerText = quoteRtText;
                 quoteRTSpan.append(link);
-                quoteRTSpan3.append(quoteRTSpan);
-                quoteRTSpan2.append(quoteRTSpan3)
-                quoteRtDiv2.append(quoteRTSpan2);
-                quoteRtDiv.append(quoteRtDiv2);
+                quoteDivChild.append(quoteRTSpan);
+                quoteDivParent.append(quoteDivChild);
 
             }
         }
